@@ -20,7 +20,7 @@ WORKDIR /sysbench
 
 RUN ./autogen.sh
 RUN CFLAGS=-g ./configure
-RUN make -k
+RUN make -j
 RUN make install
 
 CMD ["bash"]
